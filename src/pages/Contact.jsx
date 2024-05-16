@@ -22,19 +22,19 @@ const Contact = () => {
     e.preventDefault();
 
    await emailjs
-      .sendForm("service_ugdnw7l", "template_itawcsn", form.current, {
-        publicKey: "_r2ITh7tXCBPXbxbM",
-      })
-      .then(
-        () => {
-          console.log("SUCCESS!");
-          toast.success("Message sent 🚀");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-          toast.error("Somthing is wrong ⚠️");
-        }
-      );
+     .sendForm("service_ugdnw7l", "template_itawcsn", form.current, {
+       publicKey: process.env.public_Key,
+     })
+     .then(
+       () => {
+         console.log("SUCCESS!");
+         toast.success("Message sent 🚀");
+       },
+       (error) => {
+         console.log("FAILED...", error.text);
+         toast.error("Somthing is wrong ⚠️");
+       }
+     );
       // window.location.reload();
   };
 
