@@ -69,7 +69,7 @@ const Experience = () => {
           </h3>
 
           <div className="mt-1 flex w-fit items-center gap-1 text-2xl font-semibold tracking-tight text-slate-400">
-            <span>2029-2022</span>{" "}
+            <span>2019-2022</span>{" "}
             <span className="text-3xl font-extralight">/</span>{" "}
             <span>Presidency College</span>
           </div>
