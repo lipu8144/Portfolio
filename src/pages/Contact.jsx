@@ -34,7 +34,7 @@ const Contact = () => {
          toast.error("Somthing is wrong ⚠️");
        }
      );
-      // window.location.reload();
+      window.location.reload();
   };
 
   return (
