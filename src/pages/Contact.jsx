@@ -21,14 +21,9 @@ const Contact = () => {
     e.preventDefault();
 
    await emailjs
-     .sendForm(
-       import.meta.env.serviceID,
-       import.meta.env.templeteID,
-       form.current,
-       {
-         publicKey: import.meta.env.public_Key,
-       }
-     )
+     .sendForm("service_ugdnw7l", "template_itawcsn", form.current, {
+       publicKey: "_r2ITh7tXCBPXbxbM",
+     })
      .then(
        () => {
          console.log("SUCCESS!");
