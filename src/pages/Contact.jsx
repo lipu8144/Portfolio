@@ -22,7 +22,7 @@ const Contact = () => {
     e.preventDefault();
 
    await emailjs
-     .sendForm("service_ugdnw7l", "template_itawcsn", form.current, {
+     .sendForm(process.env.serviceID, process.env.templeteID, form.current, {
        publicKey: process.env.public_Key,
      })
      .then(
