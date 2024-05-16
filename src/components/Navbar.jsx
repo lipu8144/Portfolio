@@ -217,7 +217,7 @@ const DesktopMenu = () => {
       </>
 
       <li>
-        <Button url={"/cntact"} label={"Contact"} showIcon={true} className="ml-3" />
+        <Button url={"/contact"} label={"Contact"} showIcon={true} className="ml-3" />
       </li>
     </div>
   );
