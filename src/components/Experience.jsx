@@ -22,14 +22,21 @@ const Experience = () => {
           </div>
           <div className="prose prose-lg prose-invert mt-4">
             <p>
-              Worked as full stack developer. Build the whole website 
-              <a href={"https://siitsurada.in"} target="_blank" className=" text-yellow-400"> (siitsurada.in)</a>, gave it
-              a "good look and feel" with fully responsive and custome-designed
-              pages. Being a <b>Node.js</b> project, used <b>Express.js</b> to
-              create the server and routes for pages. Build reusable components
-              for good code quality. Used
+              Worked as full stack developer. Build the whole website
+              <a
+                href={"https://siitsurada.in"}
+                target="_blank"
+                className=" text-yellow-400"
+              >
+                {" "}
+                (siitsurada.in)
+              </a>
+              , gave it a "good look and feel" with fully responsive and
+              custom-designed pages. Being a <b>Node.js</b> project, used{" "}
+              <b>Express.js</b> to create the server and routes for pages. Build
+              reusable components for good code quality. Used
               <b> MongoDB, MongoDB Atlas</b>, and <b>Mongoose</b> for the
-              database. For design and responseve used
+              database. design and responsiveness used 
               <b> tailwind CSS, Swiper.js </b> used to create carousels, and{" "}
               <b>AXIOS</b> to send form data asynchronously.{" "}
             </p>
