@@ -102,14 +102,30 @@ const Navbar = () => {
             </li>
 
             <li className=" first:mt-8">
-              <Button
+              {/* <Button
                 url={"/contact"} 
                 label={"Contact"}
                 className="ml-3"
-              />
+              /> */}
+              <Link
+                to={"/contact"}
+                className={clsx(
+                  "group relative block overflow-hidden my-2 rounded px-3 text-3xl font-bold text-slate-900 "
+                )}
+                onClick={() => setOpen(false)}
+              >
+                <span
+                  className={clsx(
+                    "absolute inset-0 z-0 h-full translate-y-12 rounded bg-yellow-300 transition-transform duration-300 ease-in-out group-hover:translate-y-0",
+                    pathname.includes("/contact")
+                      ? "translate-y-6"
+                      : "translate-y-18"
+                  )}
+                />
+                <span className="relative">Contact</span>
+              </Link>
             </li>
           </div>
-
         </div>
         <DesktopMenu />
       </ul>
@@ -200,9 +216,7 @@ const DesktopMenu = () => {
             <span
               className={clsx(
                 "absolute inset-0 z-0 h-full rounded bg-yellow-300 transition-transform  duration-300 ease-in-out group-hover:translate-y-0",
-                pathname.includes("/blog")
-                  ? "translate-y-6"
-                  : "translate-y-8"
+                pathname.includes("/blog") ? "translate-y-6" : "translate-y-8"
               )}
             />
             <span className="relative">Blog</span>
@@ -214,11 +228,30 @@ const DesktopMenu = () => {
         >
           /
         </span>
+
+        {/* contact */}
+        <li>
+          <Link
+            className={clsx(
+              "group relative block overflow-hidden rounded px-3 py-1 text-base font-bold text-slate-900"
+            )}
+            to={"/contact"}
+          >
+            <span
+              className={clsx(
+                "absolute inset-0 z-0 h-full rounded bg-yellow-300 transition-transform  duration-300 ease-in-out group-hover:translate-y-0",
+                pathname.includes("/contact") ? "translate-y-6" : "translate-y-8"
+              )}
+            />
+            <span className="relative">Contact</span>
+          </Link>
+        </li>
+       
       </>
 
-      <li>
+      {/* <li>
         <Button url={"/contact"} label={"Contact"} showIcon={true} className="ml-3" />
-      </li>
+      </li> */}
     </div>
   );
 }
