@@ -115,23 +115,44 @@ const ContentList = ({ data, readMore, page }) => {
             onMouseEnter={() => onMouseEnter(index)}
             ref={(el) => (itemsRef.current[index] = el)}
           >
-            <Link
-              to={item.liveLink ? item.liveLink : Page + "/" + item.id}
-              className="flex flex-col justify-between border-t border-t-slate-100 py-10 text-slate-200 md:flex-row"
-              aria-label={item.title}
-            >
-              <div className="flex flex-col">
-                <span className="text-3xl font-bold">{item.title}</span>
-                <div className="flex gap-3 text-yellow-400 text-lg font-bold">
-                  {item.tags.map((tag, index) => (
-                    <span key={index}>{tag} </span>
-                  ))}
+            {item.liveLink ? (
+              <a
+                href={item.liveLink}
+                target="_blank"
+                className="flex flex-col justify-between border-t border-t-slate-100 py-10 text-slate-200 md:flex-row"
+                aria-label={item.title}
+              >
+                <div className="flex flex-col">
+                  <span className="text-3xl font-bold">{item.title}</span>
+                  <div className="flex gap-3 text-yellow-400 text-lg font-bold">
+                    {item.tags.map((tag, index) => (
+                      <span key={index}>{tag} </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <span className="ml-auto flex items-center gap-2 text-xl font-medium md:ml-0">
-                {readMore} <MdArrowOutward />
-              </span>
-            </Link>
+                <span className="ml-auto flex items-center gap-2 text-xl font-medium md:ml-0">
+                  {readMore} <MdArrowOutward />
+                </span>
+              </a>
+            ) : (
+              <Link
+                to={Page + "/" + item.id}
+                className="flex flex-col justify-between border-t border-t-slate-100 py-10 text-slate-200 md:flex-row"
+                aria-label={item.title}
+              >
+                <div className="flex flex-col">
+                  <span className="text-3xl font-bold">{item.title}</span>
+                  <div className="flex gap-3 text-yellow-400 text-lg font-bold">
+                    {item.tags.map((tag, index) => (
+                      <span key={index}>{tag} </span>
+                    ))}
+                  </div>
+                </div>
+                <span className="ml-auto flex items-center gap-2 text-xl font-medium md:ml-0">
+                  {readMore} <MdArrowOutward />
+                </span>
+              </Link>
+            )}
           </li>
         ))}
       </ul>

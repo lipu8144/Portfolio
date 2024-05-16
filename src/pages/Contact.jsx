@@ -28,13 +28,14 @@ const Contact = () => {
        () => {
          console.log("SUCCESS!");
          toast.success("Message sent 🚀");
+         form.current.reset();
        },
        (error) => {
          console.log("FAILED...", error.text);
          toast.error("Somthing is wrong ⚠️");
        }
      );
-      window.location.reload();
+      // window.location.reload();
   };
 
   return (
@@ -71,8 +72,9 @@ const Contact = () => {
               </div>
             </div>
 
-            <Link
-              to={"https://www.linkedin.com/in/lipu-swain-89b6242a8/"}
+            <a
+              href={"https://www.linkedin.com/in/lipu-swain-89b6242a8/"}
+              target="_blank"
               className="flex items-center gap-2"
             >
               <div className=" bg-yellow-400 text-slate-900 rounded-md inline-block p-2">
@@ -82,10 +84,11 @@ const Contact = () => {
                 <h2 className=" font-bold">LinkedIn</h2>
                 <p className=" text-footer_text_color1">Lipu Swain</p>
               </div>
-            </Link>
+            </a>
 
-            <Link
-              to={"https://www.instagram.com/its_lipu12"}
+            <a
+              href={"https://www.instagram.com/its_lipu12"}
+              target="_blank"
               className="flex items-center gap-2 mr-7"
             >
               <div className="bg-yellow-400 text-slate-900 rounded-md inline-block p-2">
@@ -95,25 +98,25 @@ const Contact = () => {
                 <h2 className=" font-bold">Instagram</h2>
                 <p className=" text-footer_text_color1">@its_lipu12</p>
               </div>
-            </Link>
+            </a>
           </div>
 
           <hr className=" h-[1px] w-[70%] my-8" />
 
           <div className="flex items-center gap-3">
             <h1 className="text-lg font-bold">Social Media</h1>
-            <Link to={"https://www.linkedin.com/in/lipu-swain-89b6242a8/"}>
+            <a href={"https://www.linkedin.com/in/lipu-swain-89b6242a8/"} target="_blank">
               <FaLinkedin />
-            </Link>
-            <Link to={"https://facebook.com/"}>
+            </a>
+            <a href={"https://facebook.com/"} target="_blank">
               <FaFacebookF />
-            </Link>
-            <Link to={"https://twitter.com/lipuswain20"}>
+            </a>
+            <a to={"https://twitter.com/lipuswain20"} target="_blank">
               <FaXTwitter />
-            </Link>
-            <Link to={"https://www.instagram.com/its_lipu12"}>
+            </a>
+            <a to={"https://www.instagram.com/its_lipu12"} target="_blank">
               <FaInstagram />
-            </Link>
+            </a>
           </div>
         </div>
 

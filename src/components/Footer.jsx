@@ -79,30 +79,34 @@ const Footer = () => {
           </ul>
         </nav>
         <div className="socials inline-flex justify-center sm:justify-end">
-          <Link
-            to={"https://github.com/lipu8144"}
+          <a
+            href={"https://github.com/lipu8144"}
+            target="_blank"
             className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400"
           >
             <FaGithub />
-          </Link>
-          <Link
-            to={"https://www.linkedin.com/in/lipu-swain-89b6242a8"}
+          </a>
+          <a
+            href={"https://www.linkedin.com/in/lipu-swain-89b6242a8"}
+            target="_blank"
             className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400"
           >
             <FaLinkedin />
-          </Link>
-          <Link
-            to={"https://twitter.com/lipuswain20"}
+          </a>
+          <a
+            href={"https://twitter.com/lipuswain20"}
+            target="_blank"
             className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400"
           >
             <FaTwitter />
-          </Link>
-          <Link
-            to={"https://www.instagram.com/its_lipu12/"}
+          </a>
+          <a
+            href={"https://www.instagram.com/its_lipu12/"}
+            target="_blank"
             className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400"
           >
             <FaInstagram />
-          </Link>
+          </a>
         </div>
       </div>
     </Bounded>
