@@ -231,7 +231,7 @@ const DesktopMenu = () => {
 
         {/* contact */}
         <li>
-          <Link
+          {/* <Link
             className={clsx(
               "group relative block overflow-hidden rounded px-3 py-1 text-base font-bold text-slate-900"
             )}
@@ -244,13 +244,13 @@ const DesktopMenu = () => {
               )}
             />
             <span className="relative">Contact</span>
-          </Link>
+          </Link> */}
+      <Button url={"/contact"} label={"Contact"} showIcon={true} className="ml-3" />
         </li>
        
       </>
 
       {/* <li>
-        <Button url={"/contact"} label={"Contact"} showIcon={true} className="ml-3" />
       </li> */}
     </div>
   );
