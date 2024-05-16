@@ -7,9 +7,8 @@ import {
   FaPhoneAlt,
   FaInstagram,
   FaFacebookF,
-  FaYoutube,
 } from "react-icons/fa";
-import { IoMail, IoLocationSharp } from "react-icons/io5";
+import { IoMail } from "react-icons/io5";
 import { FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 import Bounded from "../components/Bounded";
@@ -22,9 +21,14 @@ const Contact = () => {
     e.preventDefault();
 
    await emailjs
-     .sendForm(process.env.serviceID, process.env.templeteID, form.current, {
-       publicKey: process.env.public_Key,
-     })
+     .sendForm(
+       import.meta.env.serviceID,
+       import.meta.env.templeteID,
+       form.current,
+       {
+         publicKey: import.meta.env.public_Key,
+       }
+     )
      .then(
        () => {
          console.log("SUCCESS!");

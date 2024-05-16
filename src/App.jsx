@@ -1,6 +1,4 @@
-import { useState } from 'react'
 import {Routes, Route} from "react-router-dom"
-import { ToastContainer } from 'react-toastify'
 
 
 import './App.css'
@@ -13,6 +11,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Blogpage from './components/Blogpage'
 import Projectspage from './components/Projectspage'
+// import "dotenv/config";
 
 function App() {
 
