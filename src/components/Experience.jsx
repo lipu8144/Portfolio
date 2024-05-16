@@ -23,7 +23,7 @@ const Experience = () => {
           <div className="prose prose-lg prose-invert mt-4">
             <p>
               Worked as full stack developer. Build the whole website 
-              <Link to={"https://siitsurada.in"} className=" text-yellow-400"> (siitsurada.in)</Link>, gave it
+              <a href={"https://siitsurada.in"} target="_blank" className=" text-yellow-400"> (siitsurada.in)</a>, gave it
               a "good look and feel" with fully responsive and custome-designed
               pages. Being a <b>Node.js</b> project, used <b>Express.js</b> to
               create the server and routes for pages. Build reusable components
