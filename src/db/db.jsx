@@ -33,4 +33,22 @@ export const ProjectData = [
     liveLink: "https://mediummblogapp.netlify.app/",
     Project_Img: "",
   },
+  {
+    id: 3,
+    title: "FoodOrdering app",
+    hoverImg: "/Tomato.png",
+    tags: ["React", "express.js", "Node.js", "mongoDB", "stripe"],
+    date: "Saturday, May 10, 2024",
+    liveLink: "https://tomato-food-ordering-app-client.vercel.app/",
+    Project_Img: "",
+  },
+  {
+    id: 4,
+    title: "Gym app",
+    hoverImg: "/gym.jpg",
+    tags: ["React", "API"],
+    date: "Saturday, May 10, 2024",
+    liveLink: "https://goldsgyym.netlify.app/",
+    Project_Img: "",
+  },
 ];
