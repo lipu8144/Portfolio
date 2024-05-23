@@ -38,9 +38,11 @@ const Biography = () => {
         <Button
           label={"Resume"}
           showIcon={true}
+          target={_blank}
           url={
             "https://drive.google.com/file/d/1dZDzF02jqzY9fTXagBPNX063AEf5FKdY/view?usp=sharing"
           }
+          
         />
 
         <div className="row-start-1 max-w-sm md:col-start-2 md:row-end-3">
