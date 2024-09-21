@@ -9,9 +9,12 @@ import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Blogpage from './components/Blogpage'
+// import Blogpage from './components/Blogpage'
 import Projectspage from './components/Projectspage'
+import { lazy } from "react"
 // import "dotenv/config";
+
+const Blogpage = lazy(() => import("./components/Blogpage"));
 
 function App() {
 
