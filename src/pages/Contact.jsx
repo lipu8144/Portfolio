@@ -22,12 +22,11 @@ const Contact = () => {
   // const VITE_PUBLIC_KEY = import.meta.env.REACT_APP_PUBLIC_KEY;
 
 
-  const sendEmail = async(e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
     console.log(form.current);
 
-    await emailjs
-      .sendForm("service_ugdnw7l", "template_itawcsn", form.current, {
+   emailjs.sendForm("service_ugdnw7l", "template_itawcsn", form.current, {
         publicKey: "_r2ITh7tXCBPXbxbM",
       })
       .then(
