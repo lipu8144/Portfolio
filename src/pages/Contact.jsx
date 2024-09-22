@@ -17,27 +17,30 @@ const Contact = () => {
   document.title = "Lipu Swain | Contact"
   const form = useRef();
 
-  const VITE_SERVER_ID = import.meta.env.REACT_APP_SERVER_ID;
-  const VITE_TEMPLATE_ID = import.meta.env.TEMPLATE_ID;
-  const VITE_PUBLIC_KEY = import.meta.env.REACT_APP_PUBLIC_KEY;
+  // const VITE_SERVER_ID = import.meta.env.REACT_APP_SERVER_ID;
+  // const VITE_TEMPLATE_ID = import.meta.env.TEMPLATE_ID;
+  // const VITE_PUBLIC_KEY = import.meta.env.REACT_APP_PUBLIC_KEY;
+
+
   const sendEmail = async(e) => {
     e.preventDefault();
+    console.log(form.current);
 
-   await emailjs
-     .sendForm(VITE_SERVER_ID, VITE_TEMPLATE_ID, form.current, {
-       publicKey: VITE_PUBLIC_KEY,
-     })
-     .then(
-       () => {
-         console.log("SUCCESS!");
-         toast.success("Message sent 🚀");
-         form.current.reset();
-       },
-       (error) => {
-         console.log("FAILED...", error.text);
-         toast.error("Somthing is wrong ⚠️");
-       }
-     );
+    await emailjs
+      .sendForm("service_ugdnw7l", "template_itawcsn", form.current, {
+        publicKey: "_r2ITh7tXCBPXbxbM",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          toast.success("Message sent 🚀");
+          form.current.reset();
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          toast.error("Somthing is wrong ⚠️");
+        }
+      );
       // window.location.reload();
   };
 
